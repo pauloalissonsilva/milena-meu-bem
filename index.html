@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 2px; /* Alterado para 2px de margem superior */
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-50%);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .video-player {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .video-player iframe {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            max-width: 560px;
+        }
+        .caixa {
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: #25d366;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .contact-button i {
+            margin-right: 10px;
+        }
+        .contact-button:hover {
+            background-color: #20b351;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .carousel {
+                max-width: 80%;
+            }
+            .prev, .next {
+                font-size: 16px;
+                padding: 8px;
+            }
+            .contact-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel {
+                max-width: 100%;
+            }
+            .prev, .next {
+                font-size: 14px;
+                padding: 6px;
+            }
+            .contact-button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .caixa {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel {
+                max-width: 100%;
+            }
+            .prev, .next {
+                font-size: 12px;
+                padding: 4px;
+            }
+            .contact-button {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+            .caixa {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="slides">
+        <img src="img/mila1.jpeg" alt="Foto 1">
+        <img src="img/mila2.jpeg" alt="Foto 2">
+        <img src="img/mila3.jpeg" alt="Foto 3">
+        <img src="img/mila4.jpeg" alt="Foto 4">
+        <img src="img/mila5.jpeg" alt="Foto 5">
+        <img src="img/mila6.jpeg" alt="Foto 6">
+        <img src="img/mila7.jpeg" alt="Foto 7">
+        <img src="img/mila8.jpeg" alt="Foto 8">
+        <img src="img/mila9.jpeg" alt="Foto 9">
+
+
+
+    </div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+</div>
+
+<div class="video-player">
+    <iframe src="https://www.youtube-nocookie.com/embed/JiuYnJYKLus?si=dR3C97cevZUhvhhW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="caixa">
+    <h1>Querida Maria Milena,</h1>
+
+    <p>
+        Tem sido especial te conhecer e ainda mais incrível estar com você. Cada momento ao seu lado me mostra o quanto você é única, com um jeito que me encanta mais a cada dia.
+
+Estou realmente gostando de te conhecer e de compartilhar esse tempo com você.
+Você tem feito meus dias mais leves e felizes, e eu só quero continuar vivendo tudo isso ao seu lado.
+    </p>
+    <p>Atenciosamente,</p>
+    <p><strong>Paulo</strong></p>
+
+    <div class="col-md-6">
+        <div class="contact-container">
+            <a target="_blank"
+               href="https://api.whatsapp.com/send?phone=75999623787&text=ol%C3%A1%2C%20Paulo%20vamos%20Continuar%20juntos%2C%20estreitar%20nossa%20amizade%20e%20ver%20no%20que%20vai%20dar%3F"
+               class="contact-button" type="button"><i class="fab fa-whatsapp"></i>Entrar em contato</a>
+        </div>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </div>
+</div>
+
+<script>
+    function abrir() {
+        document.querySelector("form").style.opacity = 1;
+        document.querySelector("div").style.opacity = 0.3;
+    }
+
+    function fechar() {
+        document.querySelector("form").style.opacity = 0;
+        document.querySelector("div").style.opacity = 1;
+    }
+</script>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slides img').length;
+
+    function showSlide(index) {
+        if (index >= totalSlides) {
+            slideIndex = 0;
+        } else if (index < 0) {
+            slideIndex = totalSlides - 1;
+        } else {
+            slideIndex = index;
+        }
+        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+    }
+
+    function moveSlide(step) {
+        showSlide(slideIndex + step);
+    }
+
+    showSlide(slideIndex);
+</script>
+
+</body>
+</html>
